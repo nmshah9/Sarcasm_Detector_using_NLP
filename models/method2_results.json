@@ -1,0 +1,7 @@
+{
+  "method": "Method 2: Hugging Face fine-tuned (distilbert-base-uncased)",
+  "train_accuracy": 0.9910095605648628,
+  "test_accuracy": 0.9214172952113664,
+  "model_name": "distilbert-base-uncased",
+  "epochs": 3
+}

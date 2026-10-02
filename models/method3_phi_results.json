@@ -1,0 +1,8 @@
+{
+  "method": "Method 3: LLM (ollama - phi)",
+  "provider": "ollama",
+  "model": "phi",
+  "sample_size": 400,
+  "sample_accuracy": 0.5325,
+  "note": "Evaluated on a stratified sample of the test set only."
+}

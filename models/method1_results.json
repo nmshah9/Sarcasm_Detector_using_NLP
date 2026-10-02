@@ -1,0 +1,8 @@
+{
+  "method": "Method 1: Scratch (Word2Vec + BiLSTM)",
+  "train_accuracy": 0.8678186124024209,
+  "test_accuracy": 0.7989826346255043,
+  "vocab_size": 20000,
+  "max_len": 30,
+  "embed_dim": 100
+}
