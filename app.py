@@ -136,6 +136,22 @@ if method.startswith("Method 3"):
 
 st.divider()
 
+# ==========================================================================
+# Making Sure Streamlit Code sends Correct JSON file
+# ============================================================================
+import requests
+
+def call_ollama(prompt, model="phi"):
+    resp = requests.post(
+        "http://localhost:11434/api/chat",
+        json={
+            "model": model,
+            "messages": [{"role": "user", "content": prompt}],
+        },
+        timeout=60,
+    )
+    resp.raise_for_status()
+    return resp.json()["message"]["content"]
 
 
 # ---------------------------------------------------------------------------
