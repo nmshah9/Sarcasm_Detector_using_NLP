@@ -34,7 +34,7 @@ os.environ.setdefault("USE_TF", "0")
 import streamlit as st
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "src"))
-
+st.set_page_config(page_title="Sarcasm Detector", page_icon="🎭", layout="centered")
 # ============================================================
 # LOAD BANNER
 # ============================================================
@@ -42,7 +42,7 @@ from PIL import Image
 banner = Image.open("banner.png")
 st.image(banner, use_column_width=True)
 # =================================================================
-st.set_page_config(page_title="Sarcasm Detector", page_icon="🎭", layout="centered")
+
 
 MODEL_DIR = os.path.join(os.path.dirname(__file__), "models")
 
