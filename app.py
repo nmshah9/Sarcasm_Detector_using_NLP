@@ -35,11 +35,18 @@ import streamlit as st
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "src"))
 
-st.set_page_config(page_title="Sarcasm Detector", page_icon="🙃", layout="centered")
+# ============================================================
+# LOAD BANNER
+# ============================================================
+from PIL import Image
+banner = Image.open("banner.png")
+st.image(banner, use_column_width=True)
+# =================================================================
+st.set_page_config(page_title="Sarcasm Detector", page_icon="🎭", layout="centered")
 
 MODEL_DIR = os.path.join(os.path.dirname(__file__), "models")
 
-st.title("🙃 Sarcasm Detection — Capstone Demo")
+st.title("🎭 Sarcasm Detection — Capstone Demo")
 st.caption(
     "Compare three approaches to detecting sarcastic news headlines: "
     "a from-scratch deep learning model, a fine-tuned transformer, and an LLM."
@@ -179,3 +186,20 @@ for fname, label in [
             data = json.load(f)
         with st.expander(f"{label} — raw results"):
             st.json(data)
+
+
+# ============================================================
+# FOOTER
+# ============================================================
+
+st.markdown("---")
+
+st.markdown("""
+<div style='text-align: center;'>
+
+### 🎭 Sarcasm Detector using NLP ###
+
+Built with ❤️ using Streamlit | Developed by nmshah9
+
+</div>
+""", unsafe_allow_html=True)
